@@ -1,4 +1,4 @@
-local output_file = "/data/user/0/com.farlightgames.pgame.gp/files/tmp/login.log"
+local output_file = "/data/user/0/com.xxx.xx.xxx/files/tmp/login.log"
 local file = io.open(output_file, "w")
 ed.json = require "cjson"
 
@@ -68,7 +68,7 @@ function ed.debug_hook(event)
             --file:write(type(a13["sdkLogin"]))
             --get_table(a13["sdkLogin"])
             if type(args) == "string" then
-                local binf = string.format("/data/user/0/com.farlightgames.pgame.gp/files/tmp/%s.bin", num)
+                local binf = string.format("/data/user/0/com.xxx.xxx.xxx/files/tmp/%s.bin", num)
                 local bin = io.open(binf, "wb")
                 bin:write("encodemsg:" .. args .. "finish")
                 bin:flush()
@@ -114,4 +114,5 @@ end
 debug.sethook(ed.debug_hook, "cr", 0)
 -- file:write(ed.serialize(ed.myargs))
 -- 测试调用
+
 target_func(10, 5)
