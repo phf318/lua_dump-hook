@@ -36,7 +36,8 @@ luaL_loadfilex：代码中采取先hook lua_load获得文件指针和读取器�
 注入实现原理是hook任意函数获得LuaState指针，构造luaL_loadbufferx加载lua代码
 构造luaL_loadbufferx后要调用lua_pcall执行
 如遇报错：报错字符串会被压入栈顶，可通过读取栈顶获取报错信息，如不返回需继续执行要恢复lua栈顶
-lua注入脚本说明
+
+### lua注入脚本说明
 例：hook.lua
 - 获取输出值
 目前采取在目标应用的执行目录下创建log文件，并将需要获取的输出写入
